@@ -16,7 +16,7 @@ export default defineConfig(() => {
       },
     },
     server: {
-allowedHosts: [
+      allowedHosts: [
         'school-payment-tracker.onrender.com',
         '.onrender.com',
         '.run.app',

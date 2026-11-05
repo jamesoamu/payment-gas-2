@@ -7,7 +7,8 @@ import {
   FeeItem,
   UserAccount,
 } from '../types';
-import academyCrest from '../assets/images/academy_crest_emblem_1790110589616.jpg';
+
+const academyCrest = '/src/assets/images/academy_crest_emblem_1790110589616.jpg';
 
 export const DEMO_USERS: UserAccount[] = [
   {

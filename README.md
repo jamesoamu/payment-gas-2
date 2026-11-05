@@ -37,10 +37,23 @@ npm run build
 ├── metadata.json             # AI Studio applet metadata & config
 ├── package.json              # Project dependencies and npm scripts
 ├── tsconfig.json             # TypeScript configuration
-├── vite.config.ts            # Vite bundler & plugin configuration
+├── server.ts                 # Full-stack Express server with Vite middleware integration
+├── server/                   # Backend API routers & persistence
+│   ├── db.ts                 # JSON database persistence & financial ledger engine
+│   └── routes/               # Modular Express API endpoints
+│       ├── auth.ts           # Authentication & administrator account management
+│       ├── institution.ts    # School profile & banking configuration
+│       ├── students.ts       # Student roster, filtering & bulk term invoicing
+│       ├── payments.ts       # Fee payments, ledger allocation & Paystack verification
+│       ├── paystack.ts       # Subscription billing, key config & webhooks
+│       ├── fees.ts           # Fee catalog structure & levy management
+│       ├── reminders.ts      # Parent reminder logs & AI draft assistance
+│       ├── dashboard.ts      # Aggregated financial analytics & metrics
+│       └── backup.ts         # Full database export, import & reset
+├── data/
+│   └── edupay_db.json        # Persistent database file
 ├── public/                   # Static assets & public downloads
-│   ├── assets/               # Public image assets
-│   └── edupay-project.zip    # Pre-packaged ready-to-run project archive
+│   └── assets/               # Public image assets
 └── src/                      # Source code
     ├── main.tsx              # React DOM entry point
     ├── App.tsx               # Main application controller & state
